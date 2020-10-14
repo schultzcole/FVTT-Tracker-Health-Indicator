@@ -1,0 +1,16 @@
+#combat.combat-hp-indicator li.combatant .token-resource {
+    flex: unset;
+    padding: 0 5px;
+}
+
+#combat li.combatant .token-resource .hp-indicator {
+    background-color: #222222;
+    padding: 1px 3px;
+    border: 1px black solid;
+    border-radius: 3px;
+    margin-right: 2px;
+    font-weight: bolder;
+    font-size: .9rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
