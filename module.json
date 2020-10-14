@@ -1,23 +1,23 @@
 {
-  "name": "module-name",
-  "title": "Module Title",
-  "description": "description",
-  "version": "<VERSION NUMBER HERE>",
+  "name": "tracker-hp-indicator",
+  "title": "Tracker Health Indicator",
+  "description": "Displays a health indicator for each combatant in the combat tracker ",
+  "version": "1.0.0",
   "author": "Cole Schultz (cole#9640)",
   "esmodules": [
-    "MY SCRIPT"
+    "hp-indicator.js"
   ],
   "styles": [
-    "MY STYLESHEET"
+    "hp-indicator.css"
   ],
-  "minimumCoreVersion": "0.6.4",
-  "compatibleCoreVersion": "0.6.4",
-	"url": "https://github.com/schultzcole/<REPO_URL_HERE>",
-	"manifest": "https://raw.githubusercontent.com/schultzcole/<REPO_URL_HERE>/master/module.json",
-	"download": "https://github.com/schultzcole/<REPO_URL_HERE>/archive/<VERSION NUMBER HERE>.zip",
-	"license": "https://github.com/schultzcole/<REPO_URL_HERE>/blob/<VERSION NUMBER HERE>/LICENSE",
-	"readme": "https://github.com/schultzcole/<REPO_URL_HERE>/blob/<VERSION NUMBER HERE>/README.md",
-	"changelog": "https://github.com/schultzcole/<REPO_URL_HERE>/blob/<VERSION NUMBER HERE>/CHANGELOG.md"
+  "minimumCoreVersion": "0.7.4",
+  "compatibleCoreVersion": "0.7.4",
+	"url": "https://github.com/schultzcole/FVTT-Tracker-Health-Indicator",
+	"manifest": "https://raw.githubusercontent.com/schultzcole/FVTT-Tracker-Health-Indicator/master/module.json",
+	"download": "https://github.com/schultzcole/FVTT-Tracker-Health-Indicator/archive/1.0.0.zip",
+	"license": "https://github.com/schultzcole/FVTT-Tracker-Health-Indicator/blob/1.0.0/LICENSE",
+	"readme": "https://github.com/schultzcole/FVTT-Tracker-Health-Indicator/blob/1.0.0/README.md",
+	"changelog": "https://github.com/schultzcole/FVTT-Tracker-Health-Indicator/blob/1.0.0/CHANGELOG.md"
 }
 
  

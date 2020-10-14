@@ -1,15 +1,7 @@
 # CHANGELOG
 
-## [VERSION] ISO DATE
+## [1.0.0] 2020-10-14
 
 ### ADDED
 
-### REMOVED
-
-### CHANGED
-
-### FIXED
-
-### DEPRECATED
-
-### SECURITY
+- Add the core functionality of the module

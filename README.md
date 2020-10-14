@@ -1,6 +1,6 @@
-# FVTT Module Template Repo
+# FVTT Tracker Health Indicator
 
-A template repository for easy creation of new modules.
+Displays a health indicator for each combatant in the combat tracker.
 
 ## License
 
