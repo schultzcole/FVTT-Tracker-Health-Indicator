@@ -3,7 +3,7 @@
     padding: 0 5px;
 }
 
-#combat li.combatant .token-resource .hp-indicator {
+#combat.combat-hp-indicator li.combatant .token-resource .hp-indicator {
     background-color: #222222;
     padding: 1px 3px;
     border: 1px black solid;
