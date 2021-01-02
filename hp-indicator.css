@@ -4,6 +4,8 @@
 }
 
 #combat.combat-hp-indicator li.combatant .token-resource .hp-indicator {
+    display: inline-block;
+    line-height: 1rem;
     background-color: #222222;
     padding: 1px 3px;
     border: 1px black solid;
@@ -11,6 +13,18 @@
     margin-right: 2px;
     font-weight: bolder;
     font-size: .9rem;
+    min-width: 6rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+}
+
+#combat.combat-hp-indicator li.combatant .token-resource .resource {
+    display: inline-block;
+    line-height: 1rem;
+    min-width: 2rem;
+}
+
+#combat.combat-hp-indicator li.combatant .roll {
+    width: unset;
+    margin: unset;
 }
