@@ -24,6 +24,10 @@
     min-width: 2rem;
 }
 
+#combat.combat-hp-indicator li.combatant .token-resource input[name="resource"] {
+    display: none; /* this is a hack to deal with the fact that CUB converts the resource element to an input element, which screws with the layout. I have opted to simply not show the resource in this case because I never use it */
+}
+
 #combat.combat-hp-indicator li.combatant .roll {
     width: unset;
     margin: unset;
