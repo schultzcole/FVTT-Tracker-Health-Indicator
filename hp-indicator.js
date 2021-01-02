@@ -1,6 +1,6 @@
 const full = "Uninjured";
 const dead = "Dead";
-const unconsious = "Unconscious";
+const unconscious = "Unconscious";
 const healthStatus = ["Bloodied", "Injured"];
 
 const maxColor = hexToRGB(0x77BB55);
@@ -15,7 +15,7 @@ Hooks.on("renderCombatTracker", (combatTracker, html) => {
     const combatants = html.find(".combatant");
 
     if (!combatants.find(".token-resource").length) {
-        combatants.find(".token-name").after(`<div class=".token-resource"></div>`)
+        combatants.find(".token-name").after(`<div class="token-resource"></div>`)
     }
 
     combatants.each((i, el) => {
@@ -54,7 +54,7 @@ Hooks.on("updateToken", (_, tokenData, diff) => {
 
 function getHealthStatus(currentHP, maxHP, isPC) {
     if (currentHP === 0) {
-        return { label: isPC ? unconsious : dead, color: minColor };
+        return { label: isPC ? unconscious : dead, color: minColor };
     } else if (currentHP === maxHP) {
         return { label: full, color: maxColor };
     } else {
