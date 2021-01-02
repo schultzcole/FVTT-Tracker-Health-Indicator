@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## [1.0.2] 2021-01-02
+
+### FIXED
+
+- Fixed a layout conflict with CUB (solution is a hack; forces a CUB ui element not to display)
+
+### CHANGED
+
+- Minor layout improvements
+- Bump compatible core version
+
 ## [1.0.1] 2020-10-17
 
 ### CHANGED
