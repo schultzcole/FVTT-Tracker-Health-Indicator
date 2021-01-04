@@ -30,7 +30,6 @@ Hooks.on("renderCombatTracker", (combatTracker, html) => {
         const hpIndicator = $(`<span class="hp-indicator">${label}</span>`);
         hpIndicator.css("color", textColor);
         hpIndicator.css("-webkit-text-stroke-color", strokeColor);
-        if (label === dead) hpIndicator.css("text-decoration", "line-through");
         resourceContainer.prepend(hpIndicator);
     });
 });
@@ -64,13 +63,25 @@ function getHealthStatus(currentHP, maxHP, isPC) {
     } else {
         const frac = currentHP / maxHP;
         const index = Math.ceil(healthStatus.length * frac) - 1;
-        const colorPct = (index + .5) / healthStatus.length;
+        const colorPct = Math.pow((index + .5) / (healthStatus.length + 1), 1.0);
         return { label: healthStatus[index], color: blendColor(minColor, maxColor, colorPct) };
     }
 }
 
-function blendColor(min, max, p) {
-    return [...Array(3).keys()].map(i => (1 - p) * min[i] + p * max[i]);
+const gamma = 2.2;
+function blendColor(min, max, t) {
+    // Convert to linear space for blending
+    const [aR, aG, aB] = min.map(c => Math.pow(c, gamma));
+    const [bR, bG, bB] = max.map(c => Math.pow(c, gamma));
+
+    const lerpedComponents = [
+        (aR * (1 - t)) + (bR * t),
+        (aG * (1 - t)) + (bG * t),
+        (aB * (1 - t)) + (bB * t),
+    ]
+
+    // Convert back to gamma space for displaying
+    return lerpedComponents.map(c => Math.pow(c, 1 / gamma));
 }
 
 function subtractFromColor(color, sub) {
