@@ -8,15 +8,11 @@ const minColor = hexToRGB(0xAA1111);
 
 // Inject HP indicator in combat tracker
 Hooks.on("renderCombatTracker", (combatTracker, html) => {
-
+    if (!canvas) return;
     // Add "namespacing" class to #combat
     html.addClass("combat-hp-indicator");
 
     const combatants = html.find(".combatant");
-
-    if (!combatants.find(".token-resource").length) {
-        combatants.find(".token-name").after(`<div class="token-resource"></div>`)
-    }
 
     combatants.each((i, el) => {
         const jel = $(el);
@@ -27,7 +23,15 @@ Hooks.on("renderCombatTracker", (combatTracker, html) => {
         const { label, color } = getHealthStatus(value, max, token.actor.data.type === "character");
         const textColor = rgbToHexString(color);
         const strokeColor = rgbToHexString(subtractFromColor(color, .4));
-        jel.find(".token-resource").prepend(`<span class="hp-indicator" style="color: ${textColor}; -webkit-text-stroke-color: ${strokeColor}">${label}</span>`);
+        jel.find(".token-resource").remove();
+        const resourceContainer = $(`<div class="token-resource"></div>`);
+        jel.find(".token-name").after(resourceContainer);
+
+        const hpIndicator = $(`<span class="hp-indicator">${label}</span>`);
+        hpIndicator.css("color", textColor);
+        hpIndicator.css("-webkit-text-stroke-color", strokeColor);
+        if (label === dead) hpIndicator.css("text-decoration", "line-through");
+        resourceContainer.prepend(hpIndicator);
     });
 });
 

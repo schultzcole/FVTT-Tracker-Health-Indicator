@@ -14,7 +14,7 @@
     font-weight: bolder;
     font-size: .9rem;
     min-width: 6rem;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: .5px;
     -webkit-text-stroke-color: black;
 }
 
