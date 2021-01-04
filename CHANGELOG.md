@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## [1.0.3] 2021-01-03
+
+### FIXED
+
+- Fixed HP indicators only showing for owned tokens.
+
+### CHANGED
+
+- Burn some more bridges by completely preventing resources from displaying at all.
+- Improve text color blending so that intermediate values don't get so dark.
+
 ## [1.0.2] 2021-01-02
 
 ### FIXED
